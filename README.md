@@ -105,7 +105,7 @@ La normativa de "Pico y Placa" en Ecuador restringe la circulación vehicular en
 
 ### Horarios de Restricción
 
-- **Mañana:** 07:00 a 09:30
+- **Mañana:** 06:00 a 09:30
 - **Tarde:** 16:00 a 20:00
 
 ### Validación

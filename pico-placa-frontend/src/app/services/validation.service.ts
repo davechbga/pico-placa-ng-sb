@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ValidationResponse } from '../models/validation-response.model';
-//import { environment } from '../../enviroments/environment';
-import { environment } from '../../enviroments/environment.prod';
+import { environment } from '../../enviroments/environment';
+//import { environment } from '../../enviroments/environment.prod';
 
 @Injectable({
   providedIn: 'root',

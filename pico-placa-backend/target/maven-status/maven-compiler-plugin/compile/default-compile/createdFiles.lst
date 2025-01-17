@@ -1,0 +1,9 @@
+com\pico_placa\pico_placa_backend\PicoPlacaBackendApplication.class
+com\pico_placa\pico_placa_backend\service\PlateService.class
+com\pico_placa\pico_placa_backend\model\dto\VehicleRequestDTO.class
+com\pico_placa\pico_placa_backend\model\enums\RestrictedPlatesEnum.class
+com\pico_placa\pico_placa_backend\controller\PlateController.class
+com\pico_placa\pico_placa_backend\utils\PlateValidation.class
+com\pico_placa\pico_placa_backend\utils\TimeValidation.class
+com\pico_placa\pico_placa_backend\exception\GlobalExceptionHandler.class
+com\pico_placa\pico_placa_backend\model\dto\VehicleResponseDTO.class

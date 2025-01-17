@@ -1,0 +1,122 @@
+<div
+  class="flex flex-col items-center justify-center min-h-screen p-5 bg-gray-100"
+>
+  <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
+    <h1 class="mb-6 text-2xl font-bold text-center text-gray-800">
+      Validador Pico y Placa
+    </h1>
+    <form [formGroup]="form" (ngSubmit)="validate()">
+      <div class="mb-4">
+        <label for="plate" class="block mb-2 text-sm font-medium text-gray-700"
+          >Placa</label
+        >
+        <input
+          id="plate"
+          formControlName="plate"
+          placeholder="PBX-1234"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+        <span
+          *ngIf="formSubmitted && form.get('plate')?.hasError('required')"
+          class="text-red-500 text-xs"
+          >La placa no puede estar vacía.</span
+        >
+        <span
+          *ngIf="formSubmitted && form.get('plate')?.hasError('pattern')"
+          class="text-red-500 text-xs"
+          >La placa debe estar en el formato ABC-1234.</span
+        >
+      </div>
+      <div class="mb-4">
+        <label for="date" class="block mb-2 text-sm font-medium text-gray-700"
+          >Fecha</label
+        >
+        <input
+          id="date"
+          formControlName="date"
+          type="date"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+        <span
+          *ngIf="formSubmitted && form.get('date')?.hasError('required')"
+          class="text-red-500 text-xs"
+          >La fecha no puede estar vacía.</span
+        >
+        <span
+          *ngIf="formSubmitted && form.get('date')?.hasError('pattern')"
+          class="text-red-500 text-xs"
+          >La fecha debe estar en el formato yyyy-MM-dd.</span
+        >
+      </div>
+      <div class="mb-6">
+        <label for="hour" class="block mb-2 text-sm font-medium text-gray-700"
+          >Hora</label
+        >
+        <input
+          id="hour"
+          formControlName="hour"
+          type="time"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+        <span
+          *ngIf="formSubmitted && form.get('hour')?.hasError('required')"
+          class="text-red-500 text-xs"
+          >La hora no puede estar vacía.</span
+        >
+        <span
+          *ngIf="formSubmitted && form.get('hour')?.hasError('pattern')"
+          class="text-red-500"
+          >La hora debe estar en el formato HH:mm.</span
+        >
+      </div>
+      <button
+        [disabled]="isLoading"
+        type="submit"
+        class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <span *ngIf="!isLoading">Validar</span>
+        <span *ngIf="isLoading" class="flex items-center justify-center">
+          <svg
+            class="w-5 h-5 mr-2 text-white animate-spin"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+          Cargando...
+        </span>
+      </button>
+    </form>
+
+    <!-- Mensaje de error -->
+    <span *ngIf="errorMessage" class="mt-4 text-red-500 text-xs">
+      {{ errorMessage }}
+    </span>
+
+    <!-- Componente de resultado -->
+    <app-result-modal
+      *ngIf="showModal"
+      [plate]="form.get('plate')?.value"
+      [date]="form.get('date')?.value"
+      [hour]="form.get('hour')?.value"
+      [result]="result"
+      (closeModal)="closeModal()"
+    ></app-result-modal>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\controller\PlateController.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\exception\GlobalExceptionHandler.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\model\dto\VehicleRequestDTO.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\model\dto\VehicleResponseDTO.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\model\enums\RestrictedPlatesEnum.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\PicoPlacaBackendApplication.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\service\PlateService.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\utils\PlateValidation.java
+D:\Workspace\Projects\pico-placa-ng-sb\pico-placa-backend\src\main\java\com\pico_placa\pico_placa_backend\utils\TimeValidation.java

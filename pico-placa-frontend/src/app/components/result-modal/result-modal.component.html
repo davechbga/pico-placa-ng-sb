@@ -1,0 +1,23 @@
+<div
+  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+>
+  <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+    <button
+      class="text-gray-500 hover:text-gray-700 float-right"
+      (click)="onClose()"
+    >
+      &times;
+    </button>
+    <h2 class="text-xl font-bold mb-4">Información</h2>
+    <p class="mb-2"><strong>Placa:</strong> {{ plate }}</p>
+    <p class="mb-2"><strong>Fecha:</strong> {{ date }}</p>
+    <p class="mb-2"><strong>Hora:</strong> {{ hour }}</p>
+    <p class="mb-4"><strong>Resultado:</strong> {{ result }}</p>
+    <button
+      class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      (click)="onClose()"
+    >
+      Cerrar
+    </button>
+  </div>
+</div>
